@@ -197,7 +197,7 @@ const App: Component = () => {
         <h1 class="text-3xl font-bold text-center text-white">Notes2Anki 🤓</h1>
         <p class="text-center">This is quick and dirty, lmk if it breaks</p>
         <div class="flex justify-center mt-4">
-          <img src="/src/goofy.gif" alt="Goofy training animation" class="w-64" />
+          <img src="/goofy.gif" alt="Goofy training animation" class="w-64" />
         </div>
       </div>
       
