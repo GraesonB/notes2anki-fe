@@ -40,6 +40,11 @@ button, a, input, textarea, select {
   transition: all var(--transition-duration) ease;
 }
 
+/* Add cursor pointer to all buttons */
+button, [type="button"], [type="submit"], [type="reset"] {
+  cursor: pointer;
+}
+
 /* Input styling refinements */
 input, textarea {
   @apply bg-gray-700 border-gray-600 text-gray-200;

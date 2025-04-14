@@ -231,7 +231,7 @@ const App: Component = () => {
             
             <button 
               type="submit"
-              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-transform hover:scale-[1.02] hover:cursor-pointer"
             >
               Authenticate
             </button>
@@ -249,8 +249,8 @@ const App: Component = () => {
             <button 
               class={`px-4 py-2 rounded ${
                 inputMethod() === 'file' 
-                  ? 'bg-blue-500 text-white' 
-                  : 'bg-gray-700 text-gray-200'
+                  ? 'bg-blue-500 hover:bg-blue-600 text-white hover:cursor-pointer' 
+                  : 'bg-gray-700 hover:bg-gray-600 text-gray-200 hover:cursor-pointer'
               }`}
               onClick={() => setInputMethod('file')}
             >
@@ -259,8 +259,8 @@ const App: Component = () => {
             <button 
               class={`px-4 py-2 rounded ${
                 inputMethod() === 'text' 
-                  ? 'bg-blue-500 text-white' 
-                  : 'bg-gray-700 text-gray-200'
+                  ? 'bg-blue-500 hover:bg-blue-600 text-white hover:cursor-pointer' 
+                  : 'bg-gray-700 hover:bg-gray-600 text-gray-200 hover:cursor-pointer'
               }`}
               onClick={() => setInputMethod('text')}
             >
@@ -277,7 +277,7 @@ const App: Component = () => {
                 type="file" 
                 accept=".md,.txt"
                 onChange={handleFileChange}
-                class="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-gray-200 file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:bg-blue-900 file:text-blue-200"
+                class="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-gray-200 file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:bg-blue-900 file:text-blue-200 file:hover:bg-blue-800 file:cursor-pointer hover:cursor-pointer"
               />
             </div>
           </Show>
@@ -300,7 +300,7 @@ const App: Component = () => {
             <button 
               onClick={processFile}
               disabled={loading()}
-              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md disabled:bg-blue-800"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md disabled:bg-blue-800 transition-transform hover:scale-[1.02] hover:cursor-pointer"
             >
               {loading() ? 'Processing...' : 'Generate Anki Cards'}
             </button>
@@ -311,7 +311,7 @@ const App: Component = () => {
                 setIsAuthenticated(false);
                 setToken('');
               }} 
-              class="ml-4 px-3 py-2 text-gray-300 hover:text-white bg-gray-700 hover:bg-gray-600 rounded-md"
+              class="ml-4 px-3 py-2 text-gray-300 hover:text-white bg-gray-700 hover:bg-gray-600 rounded-md transition-transform hover:scale-110 hover:cursor-pointer"
               title="Sign out"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -335,7 +335,7 @@ const App: Component = () => {
                   <div class="border border-gray-700 rounded-md p-4 relative">
                     <button 
                       onClick={() => removeCard(index())}
-                      class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-red-400 bg-gray-700 hover:bg-gray-600 rounded-full"
+                      class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-red-400 bg-gray-700 hover:bg-gray-600 rounded-full hover:scale-110 hover:cursor-pointer"
                       title="Remove card"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -370,7 +370,7 @@ const App: Component = () => {
             
             <button 
               onClick={exportToAnki}
-              class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md"
+              class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition-transform hover:scale-[1.02] hover:cursor-pointer"
             >
               Export to Anki
             </button>
